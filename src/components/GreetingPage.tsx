@@ -4,6 +4,7 @@ import { FaFacebook, FaWhatsapp, FaTelegram, FaShareAlt } from 'react-icons/fa';
 import DOMPurify from 'dompurify';
 import slugify from 'slugify';
 import DiwaliRocket from '../components/DiwaliRocket';
+import AdsterraAd from '../components/AdsterraAd';
 
 interface GreetingPageProps {
   name?: string;
@@ -292,6 +293,11 @@ const GreetingPage = (props: GreetingPageProps & JSX.IntrinsicElements['div']) =
         </div>
       ) : (
         <>
+          {/* Top Banner Ad */}
+          <div class="w-full max-w-md mb-4">
+            <AdsterraAd adId="greeting-top-banner-ad" adType="banner" />
+          </div>
+
           <div class="chat-container">
           <br />
           <DiwaliRocket />
@@ -370,6 +376,12 @@ const GreetingPage = (props: GreetingPageProps & JSX.IntrinsicElements['div']) =
               </div>
             </div>
           </div>
+
+          {/* Middle Rectangle Ad */}
+          <div class="w-full max-w-md my-4">
+            <AdsterraAd adId="greeting-middle-rectangle-ad" adType="rectangle" />
+          </div>
+
             <div class="flex flex-col items-center space-y-4">
             <div class="bg-white shadow-lg rounded-lg p-4 flex flex-col items-center">
             <p class="text-lg font-bold mb-4">Share Your Greeting</p>
@@ -426,6 +438,11 @@ const GreetingPage = (props: GreetingPageProps & JSX.IntrinsicElements['div']) =
               </button>
             </div>
           )}
+
+          {/* Bottom Banner Ad */}
+          <div class="w-full max-w-md mt-4">
+            <AdsterraAd adId="greeting-bottom-banner-ad" adType="banner" />
+          </div>
         </>
       )}
       {snackbarMessage && (

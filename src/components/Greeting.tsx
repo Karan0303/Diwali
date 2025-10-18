@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'preact/hooks';
 import slugify from 'slugify';
 import DiwaliRocket from '../components/DiwaliRocket';
+import AdsterraAd from '../components/AdsterraAd';
 
 const Greeting = () => {
   const [name, setName] = useState<string>('');
@@ -82,6 +83,12 @@ const Greeting = () => {
                     style={imageLoading ? { display: 'none' } : {}} />
                     </>
             )}
+        
+        {/* Top Banner Ad */}
+        <div class="w-full mb-4">
+          <AdsterraAd adId="top-banner-ad" adType="banner" />
+        </div>
+
         <div class="bg-gradient-to-r from-white via-gray-100 to-gray-200 p-6 m-4 rounded-lg shadow-lg w-full text-center">
           <br />
           <h2 class="text-2xl font-bold text-gray-800 mb-4">Happy Diwali Greeting ✨</h2>
@@ -106,6 +113,11 @@ const Greeting = () => {
               Submit
             </button>
           </form>
+        </div>
+
+        {/* Bottom Rectangle Ad */}
+        <div class="w-full mt-4">
+          <AdsterraAd adId="bottom-rectangle-ad" adType="rectangle" />
         </div>
       </div>
     </div>
